@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+20.times do
+  Flat.create!(
+  name: Faker::Games::Fallout.location,
+  address: Faker::Games::DnD.city  ,
+  description: Faker::Games::Fallout.quote,
+  price_per_night: 75 + rand(250),
+  number_of_guests: 1 + rand(8)
+)
+end

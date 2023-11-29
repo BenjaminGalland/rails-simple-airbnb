@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>All our flats (<%= Flat.count %>)</h1>
+  <div class="d-flex">
+    <% @flats.each do |flat| %>
+      <div class="card col-2">
+        <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><%= flat.description %></p>
+          <a href="#" class="btn btn-primary">Show</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
